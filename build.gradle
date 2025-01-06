@@ -1,0 +1,36 @@
+plugins {
+    id 'java' apply true
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+sourceCompatibility = 17
+version = '1'
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+javafx {
+    version = "17.0.6"
+    modules = ['javafx.controls', 'javafx.graphics']
+}
+
+application {
+    mainClass = 'de.tum.cit.fop.TicTacToe'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+    test {
+        java {
+            srcDirs = []
+        }
+    }
+}
