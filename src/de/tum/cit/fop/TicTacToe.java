@@ -41,6 +41,16 @@ public class TicTacToe extends Application {
     private Label state;
     private Label info;
     private HBox box;
+    private GridPane grid;
+    private Button b1;
+    private Button b2;
+    private Button b3;
+    private Button b4;
+    private Button b5;
+    private Button b6;
+    private Button b7;
+    private Button b8;
+    private Button b9;
 
     // Used to launch the application.
     public static void main(String[] args) {
@@ -58,6 +68,25 @@ public class TicTacToe extends Application {
 
         box = new HBox(state, info);
         box.setAlignment(Pos.CENTER);
+
+        b1 = new Button();
+        b1.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b2 = new Button();
+        b2.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b3 = new Button();
+        b3.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b4 = new Button();
+        b4.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b5 = new Button();
+        b5.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b6 = new Button();
+        b6.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b7 = new Button();
+        b7.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b8 = new Button();
+        b8.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b9 = new Button();
+        b9.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
     }
 
     /**
