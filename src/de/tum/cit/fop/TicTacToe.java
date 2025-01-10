@@ -50,8 +50,10 @@ public class TicTacToe extends Application {
     public void start(Stage primaryStage) throws Exception {
         Game game = new Game();
         // TODO Implement GUI here
-        state = new Label("Game status:");
-        info = new Label("Player X turn");
+        state = new Label();
+        state.setText("Game status:");
+        info = new Label();
+        info.setText("Player X turn");
     }
 
     /**
