@@ -61,10 +61,13 @@ public class TicTacToe extends Application {
     public void start(Stage primaryStage) throws Exception {
         Game game = new Game();
         // TODO Implement GUI here
-        state = new Label();
+        state = new Label("Game status");
         state.setText("Game status:");
-        info = new Label();
+        state.setStyle(LABEL_STYLE);
+        info = new Label("Player X turn");
         info.setText("Player X turn");
+        info.setStyle(LABEL_STYLE);
+
 
         box = new HBox(state, info);
         box.setAlignment(Pos.CENTER);
@@ -96,6 +99,8 @@ public class TicTacToe extends Application {
         b9 = new Button();
         b9.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
         b9.setStyle(BUTTON_CELL_STYLE);
+
+
     }
 
     /**
