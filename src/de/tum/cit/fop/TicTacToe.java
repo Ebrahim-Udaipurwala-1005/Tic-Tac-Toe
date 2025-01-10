@@ -40,6 +40,7 @@ public class TicTacToe extends Application {
     private static final double SCENE_SIZE = 270;
     private Label state;
     private Label info;
+    private HBox box;
 
     // Used to launch the application.
     public static void main(String[] args) {
@@ -54,6 +55,9 @@ public class TicTacToe extends Application {
         state.setText("Game status:");
         info = new Label();
         info.setText("Player X turn");
+
+        box = new HBox(state, info);
+        box.setAlignment(Pos.CENTER);
     }
 
     /**
