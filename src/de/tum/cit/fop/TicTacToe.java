@@ -51,6 +51,7 @@ public class TicTacToe extends Application {
     private Button b7;
     private Button b8;
     private Button b9;
+    private Button restart;
 
     // Used to launch the application.
     public static void main(String[] args) {
@@ -120,6 +121,31 @@ public class TicTacToe extends Application {
         grid.add(b7, 0, 2);
         grid.add(b8, 1, 2);
         grid.add(b9, 2, 2);
+
+        restart = new Button("Restart");
+        restart.setStyle(BUTTON_CELL_STYLE);
+        restart.setOnAction(event-> {
+            primaryStage.close();
+            try {
+                start(new Stage());
+            }
+            catch (Exception exception) {
+                exception.printStackTrace();
+            }
+
+        });
+
+        VBox vbox = new VBox();
+        vbox.getChildren().addAll(box, grid, restart);
+        vbox.setAlignment(Pos.CENTER);
+        vbox.setStyle(BOX_STYLE);
+        vbox.setSpacing(BOX_SPACING);
+
+        Scene scene = new Scene(vbox, SCENE_SIZE, SCENE_SIZE);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Tic Tac Toe");
+        primaryStage.show();
+
     }
 
     /**
