@@ -97,7 +97,29 @@ public class TicTacToe extends Application {
         b9.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
         b9.setStyle(BUTTON_CELL_STYLE);
 
+        b1.setOnAction(markCellEvent(0, 0, game, info));
+        b2.setOnAction(markCellEvent(1, 0, game, info));
+        b3.setOnAction(markCellEvent(2, 0, game, info));
+        b4.setOnAction(markCellEvent(0, 1, game, info));
+        b5.setOnAction(markCellEvent(1, 1, game, info));
+        b6.setOnAction(markCellEvent(2, 1, game, info));
+        b7.setOnAction(markCellEvent(0, 2, game, info));
+        b8.setOnAction(markCellEvent(1, 2, game, info));
+        b9.setOnAction(markCellEvent(2, 2, game, info));
 
+        grid = new GridPane();
+        grid.setHgap(GRIDPANE_GAP);
+        grid.setVgap(GRIDPANE_GAP);
+        grid.setAlignment(Pos.CENTER);
+        grid.add(b1, 0, 0);
+        grid.add(b2, 1, 0);
+        grid.add(b3, 2, 0);
+        grid.add(b4, 0, 1);
+        grid.add(b5, 1, 1);
+        grid.add(b6, 2, 1);
+        grid.add(b7, 0, 2);
+        grid.add(b8, 1, 2);
+        grid.add(b9, 2, 2);
     }
 
     /**
@@ -114,6 +136,20 @@ public class TicTacToe extends Application {
         return value -> {
             Button currentButton = (Button) value.getSource();
             // TODO Implement the event logic
+            if (game.getCurrentGameStatus().equals(GameStatus.RUNNING) && currentButton.getText().isEmpty()){
+                Player currentPlayer = game.getCurrentPlayer();
+                currentButton.setText(currentPlayer.name());
+                game.markCell(a, b);
+                if (game.getCurrentGameStatus().equals(GameStatus.RUNNING)) {
+                    info.setText("Player " + game.getCurrentPlayer().name() + " turn");
+                }
+                else if (game.getCurrentGameStatus().equals(GameStatus.DRAW)){
+                    info.setText("Draw");
+                }
+                else {
+                    info.setText("Player " + game.getWinner().name() + " won");
+                }
+            }
         };
     }
 }
