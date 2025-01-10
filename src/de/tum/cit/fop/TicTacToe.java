@@ -68,7 +68,6 @@ public class TicTacToe extends Application {
 
         box = new HBox(BOX_SPACING, state, info);
         box.setAlignment(Pos.CENTER);
-        box.setStyle(BOX_STYLE);
 
         b1 = new Button();
         b1.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
