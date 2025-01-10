@@ -62,15 +62,14 @@ public class TicTacToe extends Application {
         Game game = new Game();
         // TODO Implement GUI here
         state = new Label("Game status");
-        state.setText("Game status:");
         state.setStyle(LABEL_STYLE);
         info = new Label("Player X turn");
-        info.setText("Player X turn");
         info.setStyle(LABEL_STYLE);
 
 
-        box = new HBox(state, info);
+        box = new HBox(BOX_SPACING, state, info);
         box.setAlignment(Pos.CENTER);
+        box.setStyle(BOX_STYLE);
 
         b1 = new Button();
         b1.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
