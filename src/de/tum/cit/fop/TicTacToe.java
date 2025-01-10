@@ -66,7 +66,7 @@ public class TicTacToe extends Application {
         info = new Label("Player X turn");
         info.setStyle(LABEL_STYLE);
 
-        box = new HBox(BOX_SPACING, state, info);
+        box = new HBox(state, info);
         box.setAlignment(Pos.CENTER);
 
         b1 = new Button();
