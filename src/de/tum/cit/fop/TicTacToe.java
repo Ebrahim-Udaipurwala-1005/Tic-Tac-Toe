@@ -70,23 +70,32 @@ public class TicTacToe extends Application {
         box.setAlignment(Pos.CENTER);
 
         b1 = new Button();
-        b1.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b1.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b1.setStyle(BUTTON_CELL_STYLE);
         b2 = new Button();
-        b2.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b2.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b2.setStyle(BUTTON_CELL_STYLE);
         b3 = new Button();
-        b3.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b3.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b3.setStyle(BUTTON_CELL_STYLE);
         b4 = new Button();
-        b4.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b4.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b4.setStyle(BUTTON_CELL_STYLE);
         b5 = new Button();
-        b5.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b5.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b5.setStyle(BUTTON_CELL_STYLE);
         b6 = new Button();
-        b6.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b6.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b6.setStyle(BUTTON_CELL_STYLE);
         b7 = new Button();
-        b7.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b7.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b7.setStyle(BUTTON_CELL_STYLE);
         b8 = new Button();
-        b8.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b8.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b8.setStyle(BUTTON_CELL_STYLE);
         b9 = new Button();
-        b9.setPrefSize(BUTTON_SIZE, BUTTON_SIZE);
+        b9.setMinSize(BUTTON_SIZE, BUTTON_SIZE);
+        b9.setStyle(BUTTON_CELL_STYLE);
     }
 
     /**
