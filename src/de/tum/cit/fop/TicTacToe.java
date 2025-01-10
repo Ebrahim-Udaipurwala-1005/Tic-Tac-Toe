@@ -38,6 +38,8 @@ public class TicTacToe extends Application {
     private static final double GRIDPANE_GAP = 3;
     private static final double BUTTON_SIZE = 50;
     private static final double SCENE_SIZE = 270;
+    private Label state;
+    private Label info;
 
     // Used to launch the application.
     public static void main(String[] args) {
@@ -48,6 +50,8 @@ public class TicTacToe extends Application {
     public void start(Stage primaryStage) throws Exception {
         Game game = new Game();
         // TODO Implement GUI here
+        state = new Label("Game status:");
+        info = new Label("Player X turn");
     }
 
     /**
